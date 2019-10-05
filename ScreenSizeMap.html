@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport=" content="width=device-width, initial-scale=1.0">
+        <title> System Size Map </title> 
+        <style>
+            Html{
+                background-color: rgb(247, 245, 245);
+            }
+            h3{
+                font-family:cursive;
+                display: inline;
+               margin-left: 225px;
+               
+            }
+            ul {
+                float:right;
+                margin-right: 8px;
+                list-style-type:none;
+                padding: 0;
+                overflow: hidden;
+                background-color: rgb(235, 231, 231);
+                border-radius: 200px 200px ;
+                line-height: 0em;
+                width:fit-content;
+                margin:0;
+                border-bottom: none;
+                margin-right:350px;
+            }
+            li {
+                float: left;
+                border-right-style: solid;
+                border-right-color: rgb(247, 245, 245);
+               
+                }
+                span{
+                    float:right;
+                    color: gray;
+                    font-size: 12px;
+                    padding-bottom: o;
+                    padding-top:8px;
+                    padding-right:8px;
+                    display: inline-block;
+                }
+                .container{
+                    
+                    border-radius:200px 200px;
+                    background-color: rgb(235, 231, 231);
+                    height:20px;
+                    width: 30px;
+                    padding-left:8px  ;
+                    padding-right: 8px;
+                    padding-top: 4px;
+                    padding-bottom: 4px;
+                  
+                }
+                .dot{
+                    font-size:.1px;  
+                    border-radius: 20px;
+                    float:left;
+                    line-height:0em;        
+                }
+            li a {
+                cursor: pointer;
+                font-size: 12px;
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+            .active{
+                background-color: gray;
+            }
+            li a:hover {
+            background-color: gray;
+            }
+            .rect{
+               
+                position: absolute;
+            }
+            .rect1{
+                margin-top: 20px;
+                background-color: #f3eabf;  
+                width:800px;
+                height:500px;
+                border:1px  #f3eabf;  
+               margin-left: 225px;
+            }
+            .rect2{
+                background-color: #ece0a7;
+                width:580px;
+                height:360px;
+                border:1px #ece0a7; 
+                margin-left: 110px;  
+            }
+            .rect3{
+                background-color: #ecdc95;
+                width:480px;
+                height:350px;
+                border:1px #ecdc95; 
+                margin-left: 50px;  
+            }
+            .rect4{
+                background-color: #e4cf71;
+                width:450px;
+                height:300px;
+                border:1px #e9c26f; 
+                margin-left: 15px;  
+            }
+            .rect5{
+                background-color: #e4ca58;
+                width:420px;
+                height:270px;
+                border:1px #e4ca58; 
+                margin-left: 15px;  
+            }
+            .rect6{
+                background-color: #e4c666;
+                width:380px;
+                height:300px;
+                border:1px #e4c666; 
+                margin-left: 20px;  
+            }
+            .rect7{
+                background-color: #e4b757;
+                width:360px;
+                height:240px;
+                border:1px #e4b757; 
+                margin-left: 10px;  
+            }
+            .rect8{
+                background-color: #e7aa4f;
+                width:320px;
+                height:250px;
+                border:1px #e7aa4f; 
+                margin-left: 20px;  
+            }
+            .rect9{
+                background-color: #e6a24a;
+                width:230px;
+                height:230px;
+                border:1px #e6a24a; 
+                margin-left: 45px;  
+            }
+            .rect10{
+                background-color: #e68f3f;
+                width:230px;
+                height:180px;
+                border:1px #e68f3f;      
+            }
+            .rect11{
+                background-color: #e6823f;
+                width:220px;
+                height:150px;
+                border:1px #e6823f; 
+                margin-left: 5px;
+            }
+            .rect12{
+                background-color: #e2f18e;
+                width:200px;
+                height:100px;
+                border:1px #e2f18e; 
+                margin-left: 10px;
+            }
+            .rect13{
+                background-color: #aaf58c;
+                width:180px;
+                height:330px;
+                border:1px #aaf58c; 
+                margin-left: 10px;
+            }
+            .rect14{
+                background-color: #7df079;
+                width:160px;
+                height:430px;
+                border:1px #7df079; 
+                margin-left: 10px;
+            }
+            .rect15{
+                background-color: #70f07b;
+                width:150px;
+                height:480px;
+                border:1px #70f07b; 
+                margin-left: 5px;
+            }
+            .rect16{
+                background-color: #68ee73;
+                width:140px;
+                height:460px;
+                border:1px #68ee73; 
+                margin-left: 5px;
+            }
+            .rect17{
+                background-color: #55df7e;
+                width:135px;
+                height:300px;
+                border:1px #55df7e; 
+                margin-left: 2px;
+            }
+            .rect18{
+                background-color: #7babf3;
+                width:130px;
+                height:250px;
+                border:1px #7babf3; 
+                margin-left: 2px;
+            }
+            .rect19{
+                background-color: #7b97f3;
+                width:120px;
+                height:230px;
+                border:1px #7b97f3; 
+                margin-left: 5px;
+            }
+            .rect20{
+                background-color: #907ef1;
+                width:110px;
+                height:200px;
+                border:1px #907ef1; 
+                margin-left: 5px;
+            }
+            .rect21{
+                background-color: #9686ee;
+                width:110px;
+                height:160px;
+                border:1px #9686ee; 
+                
+            }
+            .rect22{
+                background-color: #9e7af3;
+                width:100px;
+                height:140px;
+                border:1px #9e7af3; 
+                margin-left: 5px;
+            }
+            .rect23{
+                background-color: #b56ef0;
+                width:90px;
+                height:100px;
+                border:1px #b56ef0; 
+                margin-left: 5px;
+            }
+          
+          
+        </style>
+    </head>
+    <body>
+        <div>
+
+        <h3> Screen Size Map</h3> 
+        
+         <span class="container">
+            
+         <span class="dot" style="background-color: blueviolet; " >&sdot;</span>
+         <span class="dot" style="background-color:blue;">&sdot;</span>
+         <span class="dot" style="background-color: green;">&sdot;</span>
+         <span class="dot" style="background-color: red;">&sdot;</span>
+         <span class="dot" style="background-color: brown;">&sdot;</span>
+         <span class="dot" style="background-color: orange;">&sdot;</span>
+         </span>
+        <ul>
+            <li><a class="active">All</a></li>
+            <li><a href="#low">Low</a></li>
+            <li><a href="#medium">Medium</a></li>
+            <li style="border-radius: 0 200px 200px 0";><a href="high">High</a></li>
+         </ul>   
+         <span> POPULARITY </span>
+        </div>   
+        <div class="rect">
+         <div class="rect1">
+            <div class="rect2">
+                <div class="rect3">
+                    <div class="rect4">
+                        <div class="rect5">
+                            <div class="rect6">
+                                <div class="rect7">
+                                    <div class="rect8">
+                                        <div class="rect9">
+                                            <div class="rect10">
+                                                <div class="rect11">
+                                                    <div class="rect12">
+                                                        <div class="rect13">
+                                                            <div class="rect14">
+                                                                <div class="rect15">
+                                                                    <div class="rect16">
+                                                                        <div class="rect17">
+                                                                            <div class="rect18">
+                                                                                <div class="rect19">
+                                                                                    <div class="rect20">
+                                                                                        <div class="rect21">
+                                                                                            <div class="rect22">
+                                                                                                <div class="rect23">
+                                                                                                                      
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>  
+                                                            </div> 
+                                                        </div>         
+                                                    </div>        
+                                                </div>            
+                                            </div>       
+                                        </div>  
+                                    </div> 
+                                </div>      
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+        </div>     
+    </body>
+</html>
