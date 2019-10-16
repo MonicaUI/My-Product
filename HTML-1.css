@@ -1,0 +1,40 @@
+header
+{
+    color:Blue;
+    background-color: Black;
+    padding: 10px;
+    text-align: center;
+}
+section {
+    background-color: gray;
+}
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+  }
+
+nav ul li
+{
+    line-height: 1.1;
+    display: inline;
+    margin: 5px; 
+}
+nav ul{
+    padding:0;
+}
+h2{
+    background-color: lightgray;
+}
+
+article{
+    margin: 5px;
+    padding:5px;
+    background-color: white
+}
+footer{
+    text-align: right;
+    color: white;
+    background-color: Black;
+    padding: 10px;
+}
